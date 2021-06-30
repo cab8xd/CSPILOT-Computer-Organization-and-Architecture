@@ -1,0 +1,102 @@
+COA2: Exam I Wrap Up
+Christine Baca, cab8xd
+
+
+Preparation
+===========
+To prepare for the exam, I made a comprehensive outline of the handouts and a flashcard set to review. After going over the flashcards and outline for several iterations, I redid the quizzes to practice problem solving and concepts and, eventually, discussed the solutions in a study group.
+
+
+Strengths:
+* Understanding the mechanics of the various protocols and subjects in the handout. 
+* Learning the topics relating to the quizzes
+
+Weaknesses:
+* Did not thoroughly cover the mechanics of page table and size manipulations
+* Did not practice enough bit fiddling and address translations
+
+
+Errors
+======
+
+Q2.3, 
+My answer: False.
+Revision: 
+The correct answer is true. The PTBR must be copied into the kernel memory to allow the storage and use of the base address which directs the system to the current processes' page table.  
+
+
+
+Q3  
+My answer: SHTRN. 
+Revision:
+
+According to the kernel handout, the handling of an interrupt follows as:
+
+- Exception occurs (not necessary by an instruction)
+- Save current state of processor (register contents, PC location)
+- Processor switches to kernel mode
+- Processor jumps to special function, the 'exception handler'
+- Handler finishes, the processor enters user mode and resumes & restores processor state and continues running.
+
+The correct answer to Q3 would be STHRN.
+
+
+
+Q10  	my answer: 5th statement (After reviewing the question and answers, I realized I misinterpreted the statement)'
+
+Revision:
+The correct answer is the first answer. If a program runs in kernel mode, the code can be run in root mode. The kernel can act like all other accounts (I.e. the root) of the operating system but the same cannot be said for those accounts.
+
+
+
+
+  
+Q11.1  	  my answer: False
+Revision: 
+The correct answer is true. 
+The user account can limit which system calls can be used. System calls can be used to switch to kernel mode but using system calls manually can be actions limited to only the root user for security reasons.  
+   
+Q11.2 0   my answer: False
+The correct answer is true.
+The user account can limit access to peripheral devices to prevent misuse of hardware. The kernel handles interaction with hardware and preliminary devices.
+    
+Q11.4 0     my answer: True
+The correct answer is false. 
+The accounts cannot limit instructions running on different accounts as known security vulnerabilities such as horizontal or vertical escalations comprise the use of instructions that often override the previous account relationships.
+    
+Q11.5 0     my answer: False
+The correct answer is true. 
+Accounts without root privilege can be denied access to specified folders within a system for security reasons.  
+
+
+
+  
+  
+Q13   0     my answer: 4
+Revision:	correct answer: in virtual memory (1)
+Due to the large amounts of memory a tree-structured page table consumes, the kernel virtual memory stores multi-level page tables (on the hard disk) and swaps the page into physical memory when needed.
+
+
+
+    
+Q14   0.5   my answer: 7
+Revision: 
+The correct answer is 2^7 which computes to 128 bits. 
+
+
+
+
+Q15   0.25  my answer: [Left Blank]
+Revision:
+To calculate the memory needed, we use the physical address. The page offset is 10 bits. The physical entry is (2^5) or 64 - (2^3) or 8 bits that are used for flags. The sum of those components are 66 bits which is the max amount of physical memory that can be configured in the system. 
+
+
+
+Plans
+=====
+
+To better prepare for future assessments, I plan to...
+* Start earlier in my studying to get a more thorough and well-rounded understanding of course material.
+* Practice more problems, focusing in on the code examples on the handouts and optional worksheets.
+* Get in a stable habit of reading along with the handouts to be better engaged in class.
+* Brainstorm questions that would be in the exam based on a class day's notes and demos.
